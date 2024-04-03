@@ -1,0 +1,41 @@
+﻿@model EmailModel
+
+
+
+<div class="d-flex flex-column justify-content-center align-content-center">
+
+    <div class="text-center">
+        <div style="height:300px" class="text-center mt-3 mb-5">
+            <img src="" style="width:100%; height:100%" />
+        </div>
+    </div>
+
+
+
+
+    <div class="text-center">
+        <h2 style="color:darkorange; font-weight: bold"> Desperte seu Potencial </h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Insira Suas Informações Abaixo.
+        </p>
+    </div>
+
+    <div>
+        <form method="post" asp-controller="Home" asp-action="SalvarDadosCliente">
+            <div class="mb-3">
+                <label class="form-label">Nome:</label>
+                <input type="text" class="form-control" asp-for="Nome" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email:</label>
+                <input type="email" class="form-control" asp-for="Email" />
+                <span asp-validation-for="Email"></span>
+            </div>
+
+            <button class="btn btn-success text-center w-100" style="color:black; font-weight:bold" type="submit">Enviar Informações</button>
+        </form>
+    </div>
+</div>
